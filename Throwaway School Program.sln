@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+
+    double Zipoids = 0, Output = 0;
+
+        cout << "Fellow gamer, your favorite day has arrived: TAX day! Please enter a digit indicating" << endl;
+        cout << "the amount of Zipoids you've attained to be processed for taxation. Do not resist." << endl;
+        cin >> Zipoids;
+
+        if (Zipoids >= 0  && Zipoids <= 5000) {
+            Output = 0;
+            cout << endl << "Gamer, you owe nothing! Do not worry about taxes; Worry about being poor." << endl;
+        }
+        else if (Zipoids >= 5001 && Zipoids <= 10000) {
+            Output = (Zipoids * .1);
+            cout << endl << "Gamer, consider yourself a proud member of the gamer-middle class! You owe " << Output << "Zipoids!" << endl;
+        }
+        else if (Zipoids >= 10001 && Zipoids <= 20000) {
+            Output = (Zipoids * .15);
+            cout << endl << "Gamer, you've risen through the ranks and reached the peak tier of upper-gamer-middle class! You owe " << Output << "Zipoids!" << endl;
+        }
+        else if (Zipoids > 20000) {
+            Output = (Zipoids * .2);
+            cout << endl << "Gamer, welcome to the 1%! You owe " << Output << " Zipoids; thank you for being a loyal money-sponge!" << endl;
+        }
+    return 0;
+}
