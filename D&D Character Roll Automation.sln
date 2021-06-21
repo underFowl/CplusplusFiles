@@ -1,0 +1,65 @@
+#include <iostream>
+#include <ctime>
+#include <string>
+using namespace std;
+
+void statRoll();
+
+int main()
+{
+    string response;
+    int x = 1;
+
+    cout << "Type [Y] to generate a character. Type [N] to close at any time." << endl;
+    cout << "Please allow at least one second to pass before generating a new character." << endl;
+    cin >> response;
+
+    while (x == 1)
+    {
+        if (response == "y" || response == "Y")
+        {
+            response = "Y";
+
+            statRoll();
+
+            cout << "\nGo again? [Y]/[N]:\n ";
+            cin >> response;
+        }
+
+        else if (response == "n" || response == "N")
+        {
+            cout << "\nTerminating.." << endl;
+            x = 0;
+        }
+    }
+    return 0;
+}
+
+void statRoll()
+{
+    srand(static_cast<unsigned>(time(0)));
+
+    int mentRoll, radRoll, constRoll, dexRoll, strRoll;
+    double hpRoll = 0;
+
+    mentRoll = rand() % 19 / 3 + 1;
+    radRoll = rand() % 19 / 3 + 1;
+    constRoll = rand() % 19 / 3 + 1;
+    dexRoll = rand() % 19 / 3 + 1;
+    strRoll = rand() % 19 / 3 + 1;
+
+    cout << "\nMental Resistance [" << mentRoll << "]" << endl;
+    cout << "Rad Resistance    [" << radRoll << "]" << endl;
+    cout << "Constitution      [" << constRoll << "]" << endl;
+    cout << "Dexterity         [" << dexRoll << "]" << endl;
+    cout << "Strength          [" << strRoll << "]" << endl;
+
+    while (constRoll > 0)
+    {
+        constRoll--;
+        hpRoll = hpRoll + rand() % 7 + 1;
+    }
+
+    cout << "\nTotal Hit Points: [" << hpRoll << "]" << endl;
+    return;
+}
