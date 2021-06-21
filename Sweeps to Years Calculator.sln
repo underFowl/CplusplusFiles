@@ -1,0 +1,153 @@
+        #include <iostream>
+        #include <string>
+        using namespace std;
+
+        void convertYear(double a);
+        void convertSweep(double a);
+
+        int main()
+        {
+            system("COLOR 9"); // turns all text blue
+
+            string specification, response;
+            int digit;
+            int x = 1;
+
+            cout << "WELCOME to RiFLOZ SORBATS amazing CALCULATOR written EnTiRELY in ~ATH. please OnLY USE THiS FOR EViL PURPOSES." << endl;
+            cout << "---------------------------------------------------------------------------------------------------------------------" << endl;
+            cout << "TO BEGin please EnTER THE LETTER Y. if you want to CLOSE THiS PROGRAM type N or PRESS THE FUCKinG X On THE SCREEn.\n[Y]/[N]" << endl;
+            cin >> response;
+
+            while (x == 1)
+            {
+                if (response == "y" || response == "Y")
+                {
+
+                    response = "Y";
+
+                    cout << "SPECiFY if you want to COnVERT FROM [SWEEPS] to [YEARS] or YEARS to SWEEPS. One WORD RESPOnSES OnLY!!!!!!!!" << endl;
+                    cin >> specification;
+
+                    if (specification == "years" || specification == "Years" || specification == "YEARS")
+                    {
+                        cout << "\nEnTER a DiGiT to COnVERT. you CAnnOT EnTER A ZERO and if you enter in LETTERS i will LAUGH AT YOU." << endl;
+                        cin >> digit;
+
+                        convertYear(digit);
+
+                        cout << "\ndo you want to GO AGAin???????? [Y]/[N]:\n";
+                        cin >> response;
+                    }
+
+                    else if (specification == "sweeps" || specification == "Sweeps" || specification == "SWEEPS")
+                    {
+                        cout << "\nEnTER a DiGiT to COnVERT. you CAnnOT EnTER A ZERO and if you enter in LETTERS i will LAUGH AT YOU." << endl;
+                        cin >> digit;
+
+                        convertSweep(digit);
+
+                        cout << "\ndo you want to GO AGAin???????? [Y]/[N]:\n";
+                        cin >> response;
+                    }
+
+                    else
+                    {
+                        cout << "\ni said EnTER THE FORMAT you want to COnVERT FOOL." << endl;
+                        cin >> specification;
+
+                        if (specification == "years" || specification == "Years" || specification == "YEARS")
+                        {
+                            cout << "\nEnTER a DiGiT to COnVERT. you CAnnOT EnTER A ZERO and if you enter in LETTERS i will LAUGH AT YOU." << endl;
+                            cin >> digit;
+
+                            convertYear(digit);
+
+                            cout << "\ndo you want to GO AGAin???????? [Y]/[N]:\n";
+                            cin >> response;
+                        }
+
+                        else if (specification == "sweeps" || specification == "Sweeps" || specification == "SWEEPS")
+                        {
+                            cout << "\nEnTER a DiGiT to COnVERT. you CAnnOT EnTER A ZERO and if you enter in LETTERS i will LAUGH AT YOU." << endl;
+                            cin >> digit;
+
+                            convertSweep(digit);
+
+                            cout << "\ndo you want to GO AGAin???????? [Y]/[N]:\n";
+                            cin >> response;
+                        }
+
+                        else
+                        {
+                            cout << "\nyou clearly cannot FOLLOW BASiC inSTRUCTiOns. i SAiD TO" << endl;
+
+                        }
+                    }
+                }
+
+                else
+                {
+                    x = 0;
+                }
+            }
+
+            return 0;
+        }
+
+        void convertYear(double a)
+        {
+            int val = 0;
+            string response;
+
+            if (a != 0)
+            {
+                double div;
+                div = static_cast<double>(a) / 2.16;
+
+                cout << "\nyour DiGiT COnVERTED FROM YEARS to SWEEPS is: " << div << endl;
+            }
+
+            else
+            {
+                cout << "\nthat is just ZERO!!!!!!!! you are stupid and i am now going to LOOP THE PROGRAM. [Y]/[N]" << endl; // anything put into this sparks the following loop
+                cin >> response;
+
+                val = 1;
+
+                while (val == 1)
+                {
+                    cout << "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA" << endl; // loops infinitely
+                }
+            }
+
+            return;
+        }
+
+        void convertSweep(double a)
+        {
+            int val = 0;
+            string response;
+
+            if (a != 0)
+            {
+                double div;
+                div = static_cast<double>(a) * 2.16;
+
+                cout << "\nyour DiGiT COnVERTED FROM SWEEPS to YEARS is: " << div << endl;
+            }
+
+            else
+            {
+                cout << "\nthat is just ZERO!!!!!!!! you are stupid and i am now going to LOOP THE PROGRAM. [Y]/[N]" << endl; // anything put into this sparks the following loop
+                cin >> response;
+
+                val = 1;
+
+                while (val == 1)
+                {
+                    cout << "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA" << endl; // loops infinitely
+                }
+            }
+
+            return;
+        }
